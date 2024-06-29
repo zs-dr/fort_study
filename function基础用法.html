@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+
+</head>
+
+<body>
+    <h1>外联样式</h1>
+    <script src="stu_jichu.js">
+    </script>
+    <br>
+
+    <!-- 按键弹窗 -->
+    <button type="button" onclick="alert('欢迎!')" style="margin-top: 100px;margin-bottom: 10px;">点我!</button>
+    <br>
+
+    <!-- 定义变色内容 -->
+    <a id="txt"> 有点帅</a>
+    <script>
+        function changetxt() {
+            x = document.getElementById("txt");
+            x.innerHTML = "不帅!";
+            x.style.color = "red";
+        }
+    </script>
+    <!-- 触发按键 -->
+    <button type="button" onclick="changetxt()">点我!</button>"
+    <br>
+
+    <h1 style="font-size: large;">内联</h1>
+    <input type="text" id="tt">
+    <script>
+        function haveit() {
+            var x = document.getElementById("tt").value;
+            console.log(x);
+            // document.write(x);
+        }
+    </script>
+    <button type="button" onclick="haveit()">内容</button>
+    <br>
+    <a href="" style="border: 1;"> ------------------------------------------------</a>
+
+    <script>
+        // 定义变量
+        var a;
+        let b = 5;
+        // 定义常量
+        const c = 1;
+        console.log(b);
+        // 定义字符串
+        var d = "你好";
+        let e = 'Hello';
+        console.log(d, e);
+    </script>
+
+
+
+    <!-- 条件控制语句 -->
+    <script>
+        function jsage() {
+            let age = document.getElementById("agel").value;
+
+            if (age > 18) {
+                //满足条件1执行
+                console.log("成年了");
+                alert("成年了");
+            } else if (age == 18) {
+                // 满足条件2执行
+                console.log("刚成年");
+                alert("刚成年")
+            } else {
+                // 1,2均不满足执行
+                console.log("未成年");
+                alert("未成年");
+            }
+        }
+
+        //for 循环语句
+
+        function forXH() {
+            let xh1 = parseInt(document.getElementById("xh1").value);
+            let xh2 = parseInt(document.getElementById("xh2").value);
+            let sum = 0;
+            for (let i = xh1; i <= xh2; i++) {
+
+                sum = sum + i;
+            }
+            alert(sum);
+        }
+
+        //while循环
+
+        // while (true) {
+        //     //真就一致执行
+        // }
+
+
+    </script>
+    <br>
+
+    <!-- 循环可以嵌套判断 -->
+    <a style="float: right; margin-right: 500px;">for循环，判断是否成年</a>
+    <input type="text" id="agel" style="margin-left: 50px;">
+    <button type="button" onclick="jsage()">是否成年</button><br>
+
+
+    <a style="float: right; margin-right: 300px;">计算两个区间的所有值</a>
+    <input type="text" id="xh1" style="margin-left: 50px;">
+    <input type="text" id="xh2">
+    <button type="button" onclick="forXH()">计算递增的值</button>
+
+
+
+
+
+
+
+    <br>
+    <a href="" style="font-size: larger;">函数-----------------------------</a>
+    <br>
+    <script>
+        // function 函数名（参数1，参数2，参数3。。。。。。也可以不写参数，代表不传参）{
+        //     //函数体
+        //     return 函数体
+        // } 
+        function add() {
+            var al = 'Hello';
+            console.log(al);
+        }
+        add();
+
+        // 返回方式
+        function hello_with_return() {
+            return 'Hello_with_return';
+        }
+        var x = hello_with_return();
+        console.log(x);
+
+        // 加参数返回值
+        function add_with_return_can(name, age) {
+
+            return name + age;
+        }
+
+        var y = add_with_return_can('Hello', 18);
+        console.log(y);
+
+
+        // 作用域，在局部作用下可以调用全局变量，也可以局部变量，
+        // 但是在全局下只能调用全局变量，不能调用局部变量
+
+        let aal = 1;//全局变量
+
+        function add_with_return_can_2(name, age) {
+            let aal = 2;//局部变量
+            return name + age;
+        }
+
+    </script>
+
+</body>
+
+</html>

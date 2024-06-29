@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 略基础 -->
+    <script>
+        // 前置递增运算符 ,先自增再返回值
+        //后置相反
+        var a = 2;
+        ++a;//类似a=a+1;
+        console.log(a);
+
+        var b = 2;
+        console.log(b++ + 10);//先返回b=2+10=12，再自增b=3
+        console.log(b);
+
+
+
+        // 逻辑运算
+        
+        // &   逻辑与          如果表达式1和表达式2都为真，则返回真，否则返回假
+        // |   逻辑或          如果表达式1和表达式2有一个为真，则返回真，否则返回假
+        // ^   逻辑异或         如果表达式1和表达式2不相等，则返回真，否则返回假
+
+        // &&  逻辑与短路运算  如果表达式1为真，则返回表达式2的值，否则返回表达式1的值
+        // ||  逻辑或短路运算  如果表达式1为真，则返回表达式1的值，否则返回表达式2的值
+        // !   逻辑非          返回表达式的值的反义值
+        var x = 1;
+        var y = 2;
+        var z = 3;
+        console.log(a && b && c);//如果a为假，则返回a，如果a为真，则返回b，如果b为假，则返回c
+
+
+    </script>
+
+</body>
+
+</html>

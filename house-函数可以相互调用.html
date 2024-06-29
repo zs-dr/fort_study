@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        function f1() {
+            console.log('f1')
+
+        }
+
+        function f2() {
+            console.log('f2')
+            f1()
+        }
+
+        f2();
+
+
+        // 判断是不是闰年
+        function isLeapYear(years) {
+            if (years % 4 == 0 && years % 100 != 0 || years % 400 == 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        //输入年份
+        function scan() {
+            var year = prompt('请输入年份');
+            if (isLeapYear(year)) {
+                alert(year + '是闰年');
+            } else {
+                alert(year + '不是闰年');
+            }
+
+        }
+        scan();
+
+    </script>
+
+</body>
+
+</html>

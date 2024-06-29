@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="box1">这是一个ID选择器标签</div>
+    <div class="box2">这是一个类选择器标签</div>
+    <div>这是一个普通的div标签</div>
+    <button> 点击触发事件</button>
+
+
+    <script>
+        // 通过id选择器获取元素
+        var x = document.getElementById('box1');
+        console.log(x);
+        // 通过类名获取元素,得到的是一个数组，取到一位
+        var y = document.getElementsByClassName('box2')[0];
+        console.log(y);
+        // 通过标签去获取元素
+        // 因为都是div标签，在获取时得确定获取的是第几个，所以取到第3位
+        var z = document.getElementsByTagName('div')[2];
+        console.log(z);
+
+        //修改内容
+        // innerHTML可以解析HTML标签
+        // innerTextb不能解析HTML标签，纯文本
+        x.innerHTML = '<a href="#">跳转链接</a>'
+        y.innerText = '<a href="#">跳转链接</a>'
+
+        // 也可以改变样式
+        z.style.color = 'red';
+        z.style.fontSize = '20px';
+
+
+        // DOM事件绑定
+        var a = document.getElementsByTagName('button')[0];
+        a.onmouseover = function () { //这里是一个匿名函数，因为其他地方不会调用，没有函数名，所以可以这样写
+            alert('触发靠近事件')
+        }
+
+        // 不一定必须使用匿名函数，可以自己写一个fonction()函数，然后调用
+        // var b = document.getElementById('box1');
+        // b.addEventListener('click', function () {
+        //     alert('通过addEventListener触发事件')
+        // })
+
+        var b = document.getElementById('box1');
+        b.addEventListener('click', shle);
+        function shle() {
+            alert('通过addEventListener触发事件')
+        }
+
+
+    </script>
+
+</body>
+
+</html>

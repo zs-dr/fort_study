@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // 转换为字符串类型
+        var a = 1;
+        console.log("a的类型为" + typeof a, a);
+        // 方法一
+        var b = a.toString();
+        console.log("c的类型为" + typeof b);
+        // 方法二 强制支付转换符串
+        var c = String(a);
+        console.log("c的类型为" + typeof c);
+        // 方法三  +字符串的方式  ,隐式转换
+        var d = '' + a;
+        console.log("d的类型为：" + typeof d);
+
+
+
+        // 转换为数字型
+
+        // 转换为整数数值型
+        var la = '1'
+        la1 = parseInt(la);
+        console.log("la的类型为 ，" + typeof la, "la1的类型为" + typeof la1);
+
+        // 转换为浮点数型
+        var lb = '1.1'
+        lb1 = parseFloat(lb);
+        console.log("lb的类型为" + typeof lb, "值为:" + lb, ",lb1的类型为" + typeof lb1, "值为:" + lb1);
+
+        //强制类型转换
+        var lc = '1.1'
+        lc1 = Number(lc);
+        console.log("lc的类型为" + typeof lc, "值为:" + lc, ",lc1的类型为" + typeof lc1, "值为:" + lc1);
+
+        //通过运算符-的方式 隐式转换
+        var ld = '1.1'
+        var ld2 = ld * 1;
+        var ld1 = ld - 0;
+        console.log(ld1, "类型为：" + typeof ld1, typeof ld2);
+
+        // 转换成布尔类型
+        // 只有这五个会转换成false,其余都会转换成true
+        console.log(Boolean(''));
+        console.log(Boolean(0));
+        console.log(Boolean(NaN));
+        console.log(Boolean(null));
+        console.log(Boolean(undefined));
+        console.log(Boolean('234'));
+        console.log(Boolean(334545));
+        console.log(Boolean('你好吗'));
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

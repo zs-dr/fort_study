@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 顺序结构，分支结构，循环结构 -->
+    <script>
+        // 分支
+
+        // var age = prompt("请输入你的年龄")
+        var age = 16;
+        if (age > 18) {
+            alert("你可以上网")
+        } else if (age < 18) {
+            console.log("你不可以上网，滚出去");
+        }
+        else {
+            console.log("好吧，进去吧");
+        }
+
+
+
+        // 三元表达式
+        // 执行思路，若表达式为真，则执行表达式1，否则执行表达式2
+        var age_y = 16;
+        var x = age_y > 18 ? "可以上网" : "不可以上网";
+        console.log(x);
+
+
+        // var num = prompt("请输入1-50之间的数字")
+        // get_num = num < 10 ? '0' + num : num;
+        // alert(get_num);
+
+        // switch分支，指一些特定的值时
+
+        // 执行思路：满足条件就选择执行；break跳出循环；default默认值；continue跳出本次循环，继续执行下一次循环；
+        switch (age_y) {
+            case 1:
+                console.log("这是1");
+                break;
+            case 2:
+                console.log("这是2");
+                break;
+            case 3:
+                console.log("这是3");
+                break;
+            case age_y:
+                console.log("这是16");
+                break;
+            default:
+                console.log("这是默认值");
+        }
+
+
+        //循环
+        // for,while,do...while
+        var el = '';
+        for (var i = 1; i <= 9; i++) {
+            for (var j = 1; j <= i; j++) {
+                el += i + 'x' + j + '=' + i * j + ' ';
+            }
+            el += '\n';
+        }
+        console.log(el);
+
+    </script>
+
+
+</body>
+
+</html>

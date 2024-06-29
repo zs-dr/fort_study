@@ -1,0 +1,11 @@
+// 1.通过关键字function实现
+// function num() {
+
+// }
+// 2.函数表达式
+// var number = function () { console.log('prese') };
+// 在调用函数Number()时必须在表达式后，
+
+
+// var number = function () { console.log('prese') };
+// number();

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // 全局作用 域
+
+
+        // 局部作用域只在函数内部存在
+
+
+
+
+        // 链式作用域
+        // 内部函数可以调用外部函数的参数,就近原则
+
+        // var x = 1;
+        // function a() {
+        //     var x = 1;
+        //     function b() {
+        //         console.log(x);
+        //     }
+        // }
+
+
+        f1();
+        console.log(a);
+        console.log(b);
+        console.log(c);
+
+        function f1() {
+            var a = b = c = 9;
+            console.log(a);
+            console.log(b);
+            console.log(c);
+        }
+        //域解析，定义的量和函数会放到当前域的最前面；
+
+        function f1() {
+            var a = b = c = 9;
+            // 相当于 var a = 9; b=9; c=9; b和c直接复制，没有被var申明，当全局变量看
+            // 集体申明 var a=9, b=9, c = 9;
+            console.log(a);
+            console.log(b);
+            console.log(c);
+        }
+        f1();
+        console.log(a);
+        console.log(b);
+        console.log(c);
+
+
+    </script>
+
+
+</body>
+
+</html>
